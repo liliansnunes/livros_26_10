@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import application.repositories.LivroRepository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/livro")
 public class LivroController {
@@ -23,7 +24,8 @@ public class LivroController {
     return "insert.jsp";
   }
   @RequestMapping("/insert",method=RequestMethod.POST)
-  public String formInsert(){
+  public String saveInsert(@RequestParam("titulo")String titulo){
+    Livro  Livro 
     return "insert.jsp";
   }
 }
